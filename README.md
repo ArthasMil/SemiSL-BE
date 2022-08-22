@@ -27,7 +27,7 @@ This illustrates the befinits from pretraining the backbone with the targe domai
 ### 2. Clone the source code
 `git clone https://github.com/ArthasMil/SemiSL-BE.gitt`
 
-### 3. Donwload the models 
+### 3. Donwload the models (tuned with 15% labels)
 - [Model 1](https://1drv.ms/u/s!As8QwQacjW0gzleBjIwDN3ph5SI8?e=vmvwzl)
 - [Model 2](https://1drv.ms/u/s!As8QwQacjW0gzlaBvitTL_b6pjP_?e=zsHLk0)
 - [Ours](https://1drv.ms/u/s!As8QwQacjW0gbrVkaUrNplP3_yA?e=OPM2yu)
