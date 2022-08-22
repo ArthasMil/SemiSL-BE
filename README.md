@@ -1,5 +1,5 @@
 # SemiSL-BE
-Codebase for the paper 'Semi-supervised Learning for Building Extraction from Remote Sensing Images'
+Codebase for the paper 'Semi-supervised Learning for Building Extraction from Remote Sensing Images' by A.Yu, B.Liu, X. Cao, C. Qiu etc.
 
 ## 0. Introduction
 This project is a inference demo for paper **Semi-supervised Learning for Building Extraction from Remote Sensing Images**
