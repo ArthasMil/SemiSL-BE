@@ -58,21 +58,14 @@ if __name__ == '__main__':
     device_cu = 0
     model.cuda(device_cu)
     model.load_state_dict(torch.load(hparams.ckpt_path))
-    # load_ckpt(model, hparams.ckpt_path)
-    # torch.save(model.state_dict(),'PtImangeNet_best_iou.pth')
     model.eval()
     
-    # 开始inference
     for image, _ , imageName in dataloader_test:
-        # print(image.shape)
         with torch.no_grad():
             be = model(image.cuda(device_cu))
             predict = F.sigmoid(be)
-            # predict = model(image.cuda())
             predict = predict.cpu().detach().numpy()
         predict[predict < 0.5] = 0
         predict[predict >= 0.5] = 255
-        # predict = torch.where(predict>0.5,torch.ones_like(output),torch.zeros_like(output)) * 255
         result = np.squeeze(predict)
-        # scipy.misc.imsave('./test_result_temp/{}'.format(imageName[0]), result)
         cv2.imwrite('./test_result_temp/{}'.format(imageName[0]),result)
